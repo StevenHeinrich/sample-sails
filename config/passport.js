@@ -40,12 +40,12 @@ module.exports.passport = {
   },
 
   facebook: {
-    name: 'Facebook',
+    name: 'Facebook', 
     protocol: 'oauth2',
     strategy: require('passport-facebook').Strategy,
     options: {
-      clientID: 'your-client-id',
-      clientSecret: 'your-client-secret'
+      clientID: 'CLIENT_ID',
+      clientSecret: 'CLIENT_SECRET'
     }
   },
 
@@ -54,8 +54,8 @@ module.exports.passport = {
     protocol: 'oauth2',
     strategy: require('passport-google-oauth').OAuth2Strategy,
     options: {
-      clientID: 'your-client-id',
-      clientSecret: 'your-client-secret'
+      clientID: '383184009258-h8988rmp76nvdpbh0nf87p24lkk5jh0t.apps.googleusercontent.com',
+      clientSecret: 'R9MX5yqRjPPLylHk5Joy-cQS'
     }
   }
 };

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>New Sails App</title>
+    <title>StarterKit</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -30,10 +30,36 @@
     <!--STYLES-->
     <!--STYLES END-->
     <link rel="stylesheet" type="text/css" href="styles/bootstrap-3.3.2/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/custom.css">
   </head>
 
   <body>
-    {{{body}}}
+
+  {{> nav}}
+
+  {{#if errors}}
+      <br />
+      <div class="container">
+          <div class="alert alert-danger alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
+                      class="sr-only">Close</span></button>
+              {{#each errors}}
+                  <div>{{this}}</div>
+              {{/each}}
+          </div>
+      </div>
+  {{/if}}
+
+  {{{ body }}}
+
+
+  <div class="container">
+      <hr>
+
+      <footer>
+          <p>&copy; StarterKit 2015</p>
+      </footer>
+  </div>
 
 
 
